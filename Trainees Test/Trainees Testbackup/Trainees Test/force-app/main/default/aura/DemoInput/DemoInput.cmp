@@ -1,0 +1,9 @@
+<aura:component>
+<aura:attribute name="WholeNumber" type="integer" access="public"/>
+<aura:attribute name=" percentage" type="intger" access="public"/>
+
+<div>
+    <lightning-input type="number" name="input3" label="Number field with placeholder"  valu="{!v.WholeNumber }"placeholder="type here..." ></lightning-input>
+
+</div>
+</aura:component>	

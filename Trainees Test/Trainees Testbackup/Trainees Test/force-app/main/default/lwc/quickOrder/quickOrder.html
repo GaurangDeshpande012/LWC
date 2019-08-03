@@ -1,0 +1,102 @@
+<template>
+    <lightning-card
+    title="Quick Order"
+    icon-name="standard:Order"
+>
+    <lightning-record-edit-form object-api-name=Order onsuccess={navigatetoorder}>
+        <lightning-messages></lightning-messages>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+                    <table style="width:1000px">
+                        
+                    <tr>   
+                        <td>
+                            <table style="width:450px">
+                                    <tr>
+                                        <td>
+                                            <lightning-input-field field-name={Acc} ></lightning-input-field>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                            <td>
+                                                    <lightning-input-field field-name={Pro} onchange={handleproduct} ></lightning-input-field>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                        <lightning-input-field field-name={con}></lightning-input-field>                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>
+                                                            <lightning-input-field field-name={sta} ></lightning-input-field>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>
+                                                                <lightning-input-field field-name={date}></lightning-input-field>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td>
+                                                                    <lightning-button
+                                                                    variant="brand"
+                                                                    type="submit"
+                                                                    name="Submit"
+                                                                    label="Submit"
+                                                                ></lightning-button>
+                                                            </td>
+                                                        </tr>
+
+                                                        
+                                                                            
+                            </table>
+                    </td>
+                
+                
+                
+                    
+                    <td> 
+                        <table style="width:450px">
+                                <tr>
+                                        <td>
+                                                <div class="slds-m-around_medium">
+                                                        <img src={produrl} />
+                                                        </div>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td>
+                                                <lightning-button variant="brand" 
+                                                label="Play Video" 
+                                                title="Play Video"
+                                                 onclick={handleClick} class="slds-m-left_x-small">
+                                                </lightning-button>
+
+                                        </td>
+                                </tr>
+                                
+                        </table>
+</td>   
+                        
+                </tr>
+                
+            
+                </table> 
+
+                <c-modal header={header}>
+                    <p>Play Video</p> 
+                    <iframe width="400" height="300" src={vidurl} allowfullscreen></iframe>
+                        <div slot="footer">
+                            <lightning-button label="Cancel" variant="neutral" onclick={handleCancelModal}>
+
+                            </lightning-button>
+                        </div>
+                </c-modal>
+            </div>
+            
+            </div>
+ </lightning-record-edit-form>
+    </lightning-card>
+</template>
+                

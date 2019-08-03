@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/costEstimation": [
+                "costEstimation/costEstimation.js"
+            ],
+            "c/customform": [
+                "customform/customform.js"
+            ],
+            "c/einsteinVision_Admin_UI": [
+                "einsteinVision_Admin_UI/einsteinVision_Admin_UI.js"
+            ],
+            "c/lWCToggleButton": [
+                "lWCToggleButton/lWCToggleButton.js"
+            ],
+            "c/modal": [
+                "modal/modal.js"
+            ],
+            "c/quickOrder": [
+                "quickOrder/quickOrder.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
