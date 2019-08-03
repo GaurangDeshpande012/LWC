@@ -1,0 +1,41 @@
+<template>
+        <lightning-card title="Record FeedBack Form"> 
+        <lightning-record-edit-form object-api-name="feedback__c" onsuccess={handleSuccess}>
+            <lightning-messages></lightning-messages>
+            <div class="slds-m-around_medium">
+           
+               
+            <lightning-input-field field-name='Name__c'></lightning-input-field>
+            <lightning-input-field field-name='Email_Address__c'></lightning-input-field>
+            <lightning-input-field field-name='Experience__c'></lightning-input-field>
+            <!--<lightning-input-field field-name='Company_Name__c'></lightning-input-field>-->
+            <lightning-input-field field-name='Customer_Type__c' onchange={handleChange}></lightning-input-field>
+           <!--<lightning-input type="checkbox" label="Show details" onchange={handleChange}></lightning-input>--> 
+                <template if:true={areDetailsVisible}>
+                </template>
+                
+                <div class="slds-m-around_medium">
+                        <lightning-input
+                            type="checkbox"
+                            label="Company Name"
+                            onchange={handleChange}
+                        ></lightning-input>
+            
+                        <div class="slds-m-vertical_medium">
+                            <template if:true={areDetailsVisible}>
+                                Add Company Name!
+                                <lightning-input-field field-name='Company_Name__c'></lightning-input-field>
+                            </template>
+                            <template if:false={areDetailsVisible}>
+                                
+                            </template>
+                        </div>
+                    </div>
+                
+            <lightning-button variant="brand" type="submit" name="save" label="Submit" onclick={handleChange}>
+            </lightning-button>
+            </div>
+            
+            </lightning-record-edit-form>
+        </lightning-card> 
+        </template>

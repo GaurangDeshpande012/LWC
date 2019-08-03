@@ -1,0 +1,117 @@
+<!--</template>-->
+    <!--<div slot="actions">
+           
+
+      <lightning-input type="url" label="ZIP file url:" data-id =" zipUrl" name="input2" value=" " ></lightning-input>
+
+        <lightning-button label="Create Dataset" onclick={onCreateDataset}></lightning-button>
+        <lightning-button label="Refresh Datasets" onclick={onLoadDatasets}></lightning-button>
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Dataset Name">Dataset Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Dataset Labels">Dataset Labels</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Dataset Models">Dataset Models</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Actions">Actions</div>
+                        </th>
+                    </tr>
+
+                    <td  data-label="Actions">
+                            <div class="slds-truncate">
+
+                                    <lightning-button variant="brand" label="Train" title="Brand action" onclick={onTrainDataset} class="slds-m-left_x-small" value="dataset.id"></lightning-button>
+                                    <lightning-button variant="destructive" label="Delete" title="Destructive action" onclick={onDeleteDataset} class="slds-m-left_x-small" value="dataset.id"></lightning-button>    
+                        </div>
+                                
+                        </td>
+                        
+                       <div class="exampleHolder">
+                                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                            </div>-->
+                          
+                    
+              <!--  </thead>
+                <tbody>
+                
+                            
+                        </tbody>
+                    </table>  -->
+
+
+
+
+
+
+    <!--</div>-->
+
+
+
+       <!-- <lightning-layout-item padding="around-small">
+           
+            <lightning:layoutitem >
+                <lightning:button onclick="{!c.onCreateDataset}">Create Dataset</lightning:button>
+                <lightning:button onclick="{!c.onLoadDatasets}">Refresh Datasets</lightning:button>
+            </lightning:layoutitem>
+        </lightning-layout-item>
+        -->
+
+      <!--  <template>-->
+    
+
+        
+    
+
+            <template>
+                    <lightning-card title="Einstien">
+                    
+                    <div class="slds-gridslds-gutters">
+                    <div class="slds-col">
+                    <lightning-input type="url" label="ZIP file url:" name="input3" placeholder="Enter valid URL here..." onchange={handler}></lightning-input>
+                    <lightning-button variant="neutral" type="submit" name="save" label="Create DataSet" onclick={onCreateDataset}></lightning-button>
+                    <lightning-button variant="neutral" type="submit" name="save" label="Refresh Datasets" onclick={onLoadDatasets} ></lightning-button>
+                    </div>
+                    </div>
+                    <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                    <span><div class="slds-truncate" title="DatasetName">Dataset Name</div></span>
+                    </div>
+                    <div class="slds-col">
+                    <span><div class="slds-truncate" title="DatasetLabels">Dataset Labels</div></span>
+                    </div>
+                    <div class="slds-col">
+                    <span><div class="slds-truncate" title="DatasetModels">Dataset Models</div></span>
+                    </div>
+                    <span><div class="slds-truncate" title="Actions">Actions</div></span>
+                    </div>
+                    </lightning-card>
+                    <template for:each={dataset} for:item="dset">
+                    <div key={dset} class="slds-grid slds-gutters ">
+                    
+                    <div key={dset} class="slds-col">
+                            {dset.name}
+                    </div>
+                    <div class="slds-grid slds-wrap" style="display:grid;">
+                    <template for:each={dset.labelSummary.labels} for:item="dsetLabels">
+                    <div key={dsetLabels} class="slds-col">
+                             {dsetLabels.name} 
+                    </div>
+                    
+                    </template>
+                    <div class="slds-col"></div>
+                    <div class="slds-col"></div>
+                    </div>
+                    <div key={dset} class="slds-col">
+                        <span>
+                        <lightning-button variant="brand" label="Train" title="Train" value={dset} onclick={onTrainDataset} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="destructive" label="Delete" title="Delete" value={dset} onclick={onDeleteDataset} class="slds-m-left_x-small"></lightning-button></span>
+                        </div>
+                    </div>
+                </template>
+                </template>

@@ -1,0 +1,10 @@
+<template>
+    <a href="#" onclick={selectHandler}>
+      
+          
+        <lightning-layout-item padding="around-small">
+            <p>{contact.Name}</p>
+        </lightning-layout-item>
+        <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+    </a>
+</template>
