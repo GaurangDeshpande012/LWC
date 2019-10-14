@@ -1,0 +1,25 @@
+<template>
+        <div class="slds-m-around_medium">
+    <lightning-card  title="Flat Booking">
+        
+
+        <lightning-input-name
+       first-name=""
+       last-name="" options={salutationOptions} ></lightning-input-name>
+       <lightning-input type="tel" label="Phone" name="phone1" value=""  ></lightning-input>
+       <lightning-input type="text" label="Email" name="Email" value="" ></lightning-input>
+       <lightning-combobox
+            name="progress"
+            label="Preference1"
+            value={value}
+            placeholder="Select Flat"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+            <br/>
+
+       <lightning-button variant="brand" label="Submit" title="Brand action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+
+    </lightning-card>
+</div>
+</template>
