@@ -1,0 +1,154 @@
+<template>
+        <div class="slds-p-around_medium">
+    <lightning-card  title="Flat Booking" icon-name="standard:lead">
+        
+
+       <!-- <lightning-input-name
+       first-name=""
+       last-name="" options={salutationOptions} ></lightning-input-name>
+       <lightning-input type="tel" label="Phone" name="phone1" value=""  ></lightning-input>
+       <lightning-input type="text" label="Email" name="Email" value="" ></lightning-input>
+       <lightning-combobox
+            name="progress"
+            label="Preference1"
+            value={value}
+            placeholder="Select Flat"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>-->
+            
+
+         <!--  <lightning-record-edit-form 
+                object-api-name="Lead">
+                <div class="slds-p-around_medium">
+                <div class="container-fluid">
+                <div class="form-group">
+    <lightning-input-field field-name="First_Name__c"> 
+    </lightning-input-field>
+</div>
+<div class="form-group">
+    <lightning-input-field field-name="Last_Name__c" >
+    </lightning-input-field>
+</div>
+
+<div class="form-group">
+
+    <lightning-input-field field-name="Email" >
+    </lightning-input-field>
+</div>
+
+    <div class="form-group">
+    <lightning-input-field field-name="Phone">
+    </lightning-input-field>
+</div>
+    <div class="form-group">
+    <lightning-input-field field-name="Preference1__c" }>
+    </lightning-input-field>
+</div>
+</div>
+                </div>
+
+    <lightning-button
+                    class="slds-m-top_small" variant="brand"
+                    type="submit"
+                    label="Create Lead" onclick={createLead} style="margin-left: 16.5rem"> 
+                </lightning-button>
+
+                <lightning-button variant="brand" label="Submit" title="Brand action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        
+    </lightning-record-edit-form>-->
+
+    <!--<lightning-record-edit-form object-api-name="Lead">
+        <lightning-messages></lightning-messages>
+        <div class="slds-m-around_medium">
+            <div class="form-group">
+                <lightning-input-field field-name="First_Name__c"> 
+                </lightning-input-field>
+            </div>
+            <div class="form-group">
+                <lightning-input-field field-name="Last_Name__c" >
+                </lightning-input-field>
+            </div>
+            
+            <div class="form-group">
+            
+                <lightning-input-field field-name="Email" >
+                </lightning-input-field>
+            </div>
+            
+                <div class="form-group">
+                <lightning-input-field field-name="Phone">
+                </lightning-input-field>
+            </div>
+                <div class="form-group">
+                <lightning-input-field field-name="Preference1__c" }>
+                </lightning-input-field>
+
+            </div>
+            
+            <div class="form-group">
+                <lightning-input-field field-name="Company" }>
+                </lightning-input-field>
+
+            </div>
+            </div>
+
+            <div class="slds-m-top_medium" style="margin-left: 1.5rem">
+                <lightning-button variant="brand" type="submit" name="save" label="Create Lead ">
+               
+                </lightning-button>
+                <lightning-button variant="brand" label="Submit" title="Brand action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        
+            </div>
+       
+    </lightning-record-edit-form>-->
+    <lightning-record-edit-form 
+                                object-api-name="Lead">
+        <lightning-messages>
+        </lightning-messages>
+        <div class="slds-m-around_medium">
+            <div class="form-group">
+                <lightning-input-field field-name="FirstName"> 
+                </lightning-input-field>
+            </div>
+            <div class="form-group">
+                <lightning-input-field field-name="LastName" >
+                </lightning-input-field>
+            </div>
+            
+            <div class="form-group">
+            
+                <lightning-input-field field-name="Email" >
+                </lightning-input-field>
+            </div>
+            
+                <div class="form-group">
+                <lightning-input-field field-name="Phone">
+                </lightning-input-field>
+            </div>
+                <div class="form-group">
+                <lightning-input-field field-name="Preference1__c" }>
+                </lightning-input-field>
+
+            </div>
+            
+            <div class="form-group">
+                <lightning-input-field field-name="Company" }>
+                </lightning-input-field>
+
+            </div>
+            </div>
+            <div class="slds-m-top_medium" style="margin-left: 1.5rem">
+        <lightning-button
+            class="slds-m-top_small"
+            variant="brand"
+            type="submit"
+            name="Create Lead"
+            label="Create Lead" onclick={createrecord} >
+        </lightning-button>
+        <lightning-button variant="brand" label="Submit" title="Brand action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+       
+    </lightning-card>
+</div>
+</template>
